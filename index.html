@@ -99,14 +99,14 @@
         </div>
         <div class="form-group">
             <label for="antiguedad">Antigüedad en Meses:</label>
-            <input type="text" id="antiguedad" maxlength="6"> <!-- DEFECTO: Debería ser maxlength="3" -->
+            <input type="text" id="antiguedad" maxlength="6"> 
         </div>
         <div class="form-group">
             <label for="nivel">Nivel:</label>
             <input type="text" id="nivel" maxlength="1">
         </div>
         <div class="form-group">
-            <label>Tipo de Bono a asignar:</label>
+            <label>Tipo de Bono a asingar:</label>
             <div id="resultado"></div>
         </div>
         <button onclick="calcularBono()">Calcular Bono</button>
@@ -141,7 +141,7 @@
                 return false;
             }
 
-            // Validar antigüedad (DEFECTO: No valida el máximo de 3 dígitos)
+            // Validar antigüedad 
             const antiguedad = document.getElementById('antiguedad').value;
             if (!antiguedad || !/^\d+$/.test(antiguedad)) {
                 mostrarError('El campo que tiene error es: Antigüedad en Meses. Debe ser un número positivo');
@@ -169,7 +169,7 @@
 
             if (nivel === '*') { // Directivo
                 if (antiguedad >= 12) {
-                    tipoBono = 'Tipo B4'; // DEFECTO: Debería ser 'Tipo B1'
+                    tipoBono = 'Tipo B4'; 
                 } else {
                     tipoBono = 'Tipo B3';
                 }
