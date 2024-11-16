@@ -1,25 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>&#67;&#225;&#108;&#99;&#117;&#108;&#111;</title>
+    <title>&#66;&#111;&#110;&#111;</title>
     <style>
-        body { opacity: 0; transition: opacity 0.3s; }
-        .visible { opacity: 1; }
-        .container { max-width: 800px; margin: 20px auto; padding: 15px; }
-        .form-group { margin: 15px 0; }
+        body {
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #024b69;
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: white;
+            font-size: 1.5em;
+            margin: 0 0 20px 0;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            color: white;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            background: #e8f0fe;
+        }
+        #resultado {
+            background: #90EE90;
+            padding: 8px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background: #45a049;
+        }
     </style>
 </head>
-<body>
-    <script>
-        (function(){
-            var _0x = [':::::::::: container','# Cálculo del tipo de bono anual a empleados','::: {#mensajeError}',':::','::: form-group','Núm. empleado:','Nombre del empleado:','Antigüedad en Meses:','Nivel:',':::: form-group','Tipo de Bono a asingar:','::: {#resultado}','Calcular Bono','::::::::::'];
-            document.write(_0x[0] + '\n' + _0x[1] + '\n\n' + _0x[2] + '\n' + _0x[3] + '\n\n' + _0x[4] + '\n' + _0x[5] + '\n' + _0x[3] + '\n\n' + _0x[4] + '\n' + _0x[6] + '\n' + _0x[3] + '\n\n' + _0x[4] + '\n' + _0x[7] + '\n' + _0x[3] + '\n\n' + _0x[4] + '\n' + _0x[8] + '\n' + _0x[3] + '\n\n' + _0x[9] + '\n' + _0x[10] + '\n\n' + _0x[11] + '\n' + _0x[3] + '\n\n' + _0x[12] + '\n' + _0x[13]);
-            setTimeout(function() {
-                document.body.classList.add('visible');
-            }, 100);
-        })();
-    </script>
-</body>
+<body><script>document.write(`
+<div class="container">
+    <h1>Cálculo del tipo de bono anual a empleados</h1>
+    <div id="mensajeError"></div>
+    <div class="form-group">
+        <label>Núm. empleado:</label>
+        <input type="text">
+    </div>
+    <div class="form-group">
+        <label>Nombre del empleado:</label>
+        <input type="text">
+    </div>
+    <div class="form-group">
+        <label>Antigüedad en Meses:</label>
+        <input type="number">
+    </div>
+    <div class="form-group">
+        <label>Nivel:</label>
+        <input type="text">
+    </div>
+    <div class="form-group">
+        <label>Tipo de Bono a asingar:</label>
+        <div id="resultado"></div>
+    </div>
+    <button onclick="calcularBono()">Calcular Bono</button>
+</div>
+`);</script></body>
 </html>
